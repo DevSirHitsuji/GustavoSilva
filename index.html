@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="content">
+            <h1>I'M GUSTAVO SILVA</h1>
+            <p>
+                Hello, I have 21 years and I love programming, currently I'm study in project "programadores do amanhã"
+                and I bilieve that will change my life forever, I'm so gratefull.
+                For contact, check my social midias or send-me email. thanks for atention <3
+            </p>
+            <h2>Main skills</h2>
+            <ul>
+                <li>Fullstack develop</li>
+                <li>Html and Css</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+            </ul>
+        </section>
+        <footer>
+            <p>Copyright &copy Gustavo Silva</p>
+            <p>gustavooficial2511@gmail.com</p>
+        </footer>
+    </main>
+
+    <div class="more">
+        <p>
+            Name: Gustavo Silva<br>
+            Bith: 25/11/2001<br>
+            Telephone: +55 98 97400-8538<br>
+            Email: gustavooficial2511@gmail.com
+        </p>
+        
+        <div>
+            <img class="icon" src="github.png" alt="">
+            <a href="https://github.com/DevSirHitsuji">Github</a>
+        </div>
+        <div>
+            <img class="icon" src="linkedin.png" alt="">
+            <a href="https://www.linkedin.com/in/gustavo-silva-94779622b/">linkedin</a>
+        </div>
+        <div>
+            <img class="icon" src="instagram.png" alt="">
+            <a href="https://www.instagram.com/karl_silva25/">Instagram</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="profile">
+            <img src="https://pbs.twimg.com/profile_images/1521124197879230465/KukjFtNC_400x400.jpg" alt="perfil">
+            <p>Gustavo Silva</p>
+        </div>
+        <div class="midias">
+            <div onclick="location.href='https://www.linkedin.com/in/gustavo-silva-94779622b/'" class="midiaSocial">
+                <img src="linkedin.png" alt="linkedin icon">
+                <p>Linkedin</p>
+            </div>
+
+            <div onclick="location.href='https://github.com/DevSirHitsuji'" class="midiaSocial">
+                <img src="github.png" alt="github icon">
+                <p>Github</p>
+            </div>
+
+            <div onclick="location.href='https://www.instagram.com/karl_silva25/'" class="midiaSocial">
+                <img src="instagram.png" alt="instagram icon">
+                <p>Instagram</p>
+            </div>
+        </div>
+        <button type="button" class="btn" onclick="more();">more</button>
+    </header>
+
+    <script>
+        function more(){
+            let info = document.getElementsByClassName("more");
+            let moreButton = document.getElementsByClassName("btn");
+            if (info[0].style.display === "none"){
+                info[0].style.display = "flex";
+                moreButton[0].style.top = 320 + "px";
+            }else{
+                info[0].style.display = "none";
+                moreButton[0].style.top = 163 + "px";
+                
+            }
+        }
+    </script>
+</body>
+</html>
