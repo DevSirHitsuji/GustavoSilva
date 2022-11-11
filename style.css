@@ -160,4 +160,8 @@ header button{
     footer p {
         margin: 2px;
     }
+
+    .midias {
+        display: none;
+    }
 }
