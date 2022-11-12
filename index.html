@@ -53,10 +53,10 @@
         </div>
     </div>
 
-    <header>
+    <header id="header">
         <div class="profile">
-            <img src="https://pbs.twimg.com/profile_images/1521124197879230465/KukjFtNC_400x400.jpg" alt="perfil">
-            <p>Gustavo Silva</p>
+            <img src="https://pbs.twimg.com/media/FhV1DRqWQAAfqfT?format=jpg&name=small" alt="perfil">
+            <p>Gustavo Silva </p>
         </div>
         <div class="midias">
             <div onclick="location.href='https://www.linkedin.com/in/gustavo-silva-94779622b/'" class="midiaSocial">
@@ -74,22 +74,48 @@
                 <p>Instagram</p>
             </div>
         </div>
-        <button type="button" class="btn" onclick="more();">more</button>
+        <button type="button" class="btnMore" onclick="more();">more</button>
+        <!--
+            Implements traductions  
+            <button type="button" class="btnTranslate">translate</button> 
+        -->
     </header>
 
     <script>
         function more(){
             let info = document.getElementsByClassName("more");
-            let moreButton = document.getElementsByClassName("btn");
+            let moreButton = document.getElementsByClassName("btnMore");
             if (info[0].style.display === "none"){
                 info[0].style.display = "flex";
-                moreButton[0].style.top = 320 + "px";
+                moreButton[0].style.top = 340 + "px";
             }else{
                 info[0].style.display = "none";
-                moreButton[0].style.top = 163 + "px";
-                
+                moreButton[0].style.top = 163 + "px";    
             }
         }
+
+        function setColors(){
+            const date = new Date();
+            let hours = date.getHours();
+
+            let purple1 = "rgb(58, 0, 101)";
+            let purple2 = "rgb(43, 0, 93)";
+
+            let orange1 = "rgb(225, 113, 0)";
+            let orange2 = "rgb(153, 74, 0)";
+
+
+            if (hours > 6  && hours < 18){
+                const sheet = new CSSStyleSheet();
+                sheet.replaceSync(":root { --primaryColor: " + orange1 + "; --primaryColorDark: " + orange2 + ";}")
+                document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]
+            }else{
+                const sheet = new CSSStyleSheet();
+                sheet.replaceSync(":root { --primaryColor: " + purple1 + "; --primaryColorDark: " + purple2 + ";}")
+                document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]
+            }
+        }
+        setColors();
     </script>
 </body>
 </html>
