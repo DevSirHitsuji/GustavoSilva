@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="Assets/favicon/favicon.ico">
     <title>I'm Gustavo Silva</title>
 </head>
 <body>
@@ -40,15 +41,15 @@
         </p>
         
         <div>
-            <img class="icon" src="github.png" alt="">
+            <img class="icon" src="Assets/icons/github.png" alt="">
             <a href="https://github.com/DevSirHitsuji">Github</a>
         </div>
         <div>
-            <img class="icon" src="linkedin.png" alt="">
+            <img class="icon" src="Assets/icons/linkedin.png" alt="">
             <a href="https://www.linkedin.com/in/gustavo-silva-94779622b/">linkedin</a>
         </div>
         <div>
-            <img class="icon" src="instagram.png" alt="">
+            <img class="icon" src="Assets/icons/instagram.png" alt="">
             <a href="https://www.instagram.com/karl_silva25/">Instagram</a>
         </div>
     </div>
@@ -60,17 +61,17 @@
         </div>
         <div class="midias">
             <div onclick="location.href='https://www.linkedin.com/in/gustavo-silva-94779622b/'" class="midiaSocial">
-                <img src="linkedin.png" alt="linkedin icon">
+                <img src="Assets/icons/linkedin.png" alt="linkedin icon">
                 <p>Linkedin</p>
             </div>
 
             <div onclick="location.href='https://github.com/DevSirHitsuji'" class="midiaSocial">
-                <img src="github.png" alt="github icon">
+                <img src="Assets/icons/github.png" alt="github icon">
                 <p>Github</p>
             </div>
 
             <div onclick="location.href='https://www.instagram.com/karl_silva25/'" class="midiaSocial">
-                <img src="instagram.png" alt="instagram icon">
+                <img src="Assets/icons/instagram.png" alt="instagram icon">
                 <p>Instagram</p>
             </div>
         </div>
@@ -107,14 +108,12 @@
 
             if (hours > 6  && hours < 18){
                 const sheet = new CSSStyleSheet();
-                sheet.replaceSync(":root { --primaryColor: " + orange1 + "; --primaryColorDark: " + orange2 + ";}")
-                sheet.replaceSync("main{background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7419243.jpg')")
-                document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]
+                sheet.replaceSync(":root { --primaryColor: " + orange1 + "; --primaryColorDark: " + orange2 + ";}main{background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7419243.jpg')");
+                document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
             }else{
                 const sheet = new CSSStyleSheet();
-                sheet.replaceSync(":root { --primaryColor: " + purple1 + "; --primaryColorDark: " + purple2 + ";}")
-                sheet.replaceSync("main{background-image: url('https://m.media-amazon.com/images/I/61nTQd28HRL.jpg')")
-                document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]
+                sheet.replaceSync(":root { --primaryColor: " + purple1 + "; --primaryColorDark: " + purple2 + ";} main{background-image: url('https://m.media-amazon.com/images/I/61nTQd28HRL.jpg')");
+                document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
             }
         }
         setColors();
