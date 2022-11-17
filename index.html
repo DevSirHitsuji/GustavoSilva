@@ -18,10 +18,10 @@
             </p>
             <h2>Main skills</h2>
             <ul>
-                <li>Fullstack develop</li>
+                <li>Web develop</li>
                 <li>Html and Css</li>
+                <li>JavaScript</li>               
                 <li>Python</li>
-                <li>JavaScript</li>
                 <li>Java</li>
             </ul>
         </section>
@@ -108,10 +108,12 @@
             if (hours > 6  && hours < 18){
                 const sheet = new CSSStyleSheet();
                 sheet.replaceSync(":root { --primaryColor: " + orange1 + "; --primaryColorDark: " + orange2 + ";}")
+                sheet.replaceSync("main{background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7419243.jpg')")
                 document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]
             }else{
                 const sheet = new CSSStyleSheet();
                 sheet.replaceSync(":root { --primaryColor: " + purple1 + "; --primaryColorDark: " + purple2 + ";}")
+                sheet.replaceSync("main{background-image: url('https://m.media-amazon.com/images/I/61nTQd28HRL.jpg')")
                 document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]
             }
         }

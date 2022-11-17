@@ -16,15 +16,19 @@ body{
 main{
     margin: 0px;
     padding: 0px;
-    background-image: url(https://m.media-amazon.com/images/I/61nTQd28HRL.jpg);
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
 }
 
 .content{
-    height: 694px;
+    height: 940px;
     background-color: var(--easyRead);
     color: aliceblue;
     padding: 10px;
     margin: 10px;
+
+    font-size: 200%;
 
 }
 
@@ -126,7 +130,9 @@ header button{
 
     .content{
         text-align: center;
-        height: 400px;
+        height: 720px;
+
+        font-size: 25px;
     }
 
     ul,
